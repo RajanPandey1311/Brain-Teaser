@@ -23,7 +23,7 @@ export const usePublishResult = (resultData) => {
     try {
       if (result !== [] && !username) throw new Error("Couldn't get Result");
       await postServerData(
-        `${process.env.REACT_APP_SERVER_HOSTNAME}/api/result`,
+        "https://brain-teaser.onrender.com/api/result",
         resultData,
         (data) => data
       );
