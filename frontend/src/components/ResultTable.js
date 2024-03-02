@@ -6,7 +6,7 @@ export default function ResultTable() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/result`, (res) => {
+        getServerData("https://brain-teaser.onrender.com/api/result", (res) => {
             setData(res)
         })
     })
