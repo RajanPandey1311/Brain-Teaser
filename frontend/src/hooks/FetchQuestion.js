@@ -21,7 +21,7 @@ export const useFetchQestion = () => {
     (async () => {
       try {
         const [{ questions, answers }] = await getServerData(
-          `${process.env.REACT_APP_SERVER_HOSTNAME}/api/questions`,
+          "https://brain-teaser.onrender.com/api/questions",
           (data) => data
         );
         console.log("API Response:", { questions, answers });
